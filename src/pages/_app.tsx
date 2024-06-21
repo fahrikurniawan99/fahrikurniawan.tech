@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={inter.className}>
-      <Container maxWidth="sm">
+      <Container maxWidth="sm" sx={{ mb: 10 }}>
         <Navigation />
         <Component {...pageProps} />
       </Container>

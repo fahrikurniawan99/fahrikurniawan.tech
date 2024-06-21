@@ -3,6 +3,8 @@ import { Box, Typography } from "@mui/material";
 import Head from "next/head";
 import { PostData, getAllPostSlugs, getPostData } from "../../../lib/posts";
 import * as React from "react";
+import PostReaction from "@/components/post-reaction";
+import Comments from "@/components/comments";
 
 export default function Page({ postData }: { postData: PostData }) {
   const date = useDate();
@@ -36,6 +38,8 @@ export default function Page({ postData }: { postData: PostData }) {
         {date.format(postData.publishDate, "relativeTime")}
       </Typography>
       <div dangerouslySetInnerHTML={{ __html: postData.content }}></div>
+      <PostReaction />
+      <Comments />
     </>
   );
 }

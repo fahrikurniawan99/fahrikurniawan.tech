@@ -50,6 +50,7 @@ export default function Comments() {
       </Stack>
       {Array.from({ length: 5 }).map((_, i) => (
         <Box
+          key={i}
           mt={1.5}
           p={1.5}
           border={1}
